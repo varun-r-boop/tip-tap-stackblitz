@@ -1,0 +1,56 @@
+<ng-container *ngIf="editor$ | async as editor">
+  <tiptap-editor [editor]="editor"></tiptap-editor>
+
+  <tiptap-floating-menu [editor]="editor" class="floating-menu">
+    <p>+</p>
+  </tiptap-floating-menu>
+
+  <tiptap-bubble-menu [editor]="editor" class="bubble-menu">
+    <span
+      class="btn"
+      [class.is-active]="editor.isActive('highlight')"
+      (click)="editorService.toggleHighlight()"
+      >Higlight</span
+    >
+    <span
+      class="btn"
+      [class.is-active]="editor.isActive('bold')"
+      (click)="editorService.toggleBold()"
+      >B</span
+    >
+    <span
+      class="btn"
+      [class.is-active]="editor.isActive('italic')"
+      (click)="editorService.toggleItalic()"
+    >
+      I
+    </span>
+    <span
+      class="btn"
+      [class.is-active]="editor.isActive('ordered_list')"
+      (click)="editorService.toggleOrderedList()"
+      >List</span
+    >
+
+    <span
+      class="btn"
+      [class.is-active]="editor.isActive('heading', { level: 1 })"
+      (click)="editorService.toggleH1()"
+      >H1</span
+    >
+
+    <span
+      class="btn"
+      [class.is-active]="editor.isActive('heading', { level: 2 })"
+      (click)="editorService.toggleH2()"
+      >H2</span
+    >
+    <span
+      class="btn"
+      [class.is-active]="editor.isActive('code')"
+      (click)="editorService.toggleCode()"
+    >
+      C
+    </span>
+  </tiptap-bubble-menu>
+</ng-container>

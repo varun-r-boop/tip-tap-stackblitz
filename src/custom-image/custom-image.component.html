@@ -1,0 +1,4 @@
+<div class="image-block" *ngIf="data$ | async as data">
+  <img class='img' [title]="data.title" [alt]="data.alt" [src]="data.src" />
+  <p>{{ data.title }}</p>
+</div>

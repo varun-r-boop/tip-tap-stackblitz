@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.image-block {
+  background-color: bisque;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.image-block p {
+  margin: 20px auto 0;
+  color: grey;
+  font-size: 10px;
+}
+
+.image-block .img {
+  max-width: 100%;
+  max-height: 200px;
+}

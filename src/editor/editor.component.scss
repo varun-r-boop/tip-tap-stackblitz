@@ -1,0 +1,49 @@
+:host {
+  .bubble-menu {
+    background-color: black;
+    padding: 10px 5px;
+    color: white;
+    text-align: center;
+
+    ::ng-deep {
+      .is-active {
+        font-weight: bold;
+        color: red;
+      }
+    }
+  }
+
+  ::ng-deep {
+    .ProseMirror:focus {
+      outline: none;
+    }
+
+    .my-custom-is-empty-class::before {
+      content: attr(data-placeholder);
+      float: left;
+      color: #adb5bd;
+      pointer-events: none;
+      height: 0;
+    }
+
+    .tiptap {
+      padding-left: 20px;
+    }
+
+    .btn {
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .code {
+      background-color: aqua;
+      display: inline-block;
+    }
+  }
+}
+
+.floating-menu p {
+  margin: 0;
+  margin-left: -20px;
+  cursor: pointer;
+}
